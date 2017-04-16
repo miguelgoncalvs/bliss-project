@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="BlissProject">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Include the Bootstap Stylesheet -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/offline.css">
+
+        <!-- Include the AngularJS library -->
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.js"></script>
+
+        <!-- Include other libraries -->
+        <script src="lib/jquery-2.1.4.min.js"></script>
+        <script src="lib/offline.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+        <!-- Modules -->
+        <script src="javascript/app.js"></script>
+        <script src="javascript/routes.js"></script>
+
+        <!-- Controllers -->
+        <script src="javascript/controllers/MainController.js"></script>
+        <script src="javascript/controllers/QuestionsController.js"></script>
+        <script src="javascript/controllers/DetailsController.js"></script>
+        <script src="javascript/controllers/ShareController.js"></script>
+
+
+        <!-- Services -->
+        <!-- Directives -->
+
+        <base href="/">
+    </head>
+    <body>
+        <div class="container">
+            <div ng-view> </div>
+        </div>
+    </body>
+</html>

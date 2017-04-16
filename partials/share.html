@@ -1,0 +1,28 @@
+<form >
+	<h3>
+        <span class="label label-default"> {{ title }} </span>
+    </h3>
+  	<div class="form-group">
+    	<label for="exampleInputEmail1">Email address</label>
+    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ng-model="email" placeholder="Enter email">
+    	<small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small>
+  	</div>
+
+    <ul class="pager">
+        <li><a href="#/questions/{{ id }}"> Previous </a></li>
+        <li><a href="" role="button" ng-click="submitShareQuestion()"> Submit </a></li>
+        <li><a href="#/share/{{ id }}"> Share </a></li>
+    </ul>
+</form>
+
+<div id="SuccessMessage" class="alert alert-success" role="alert">
+	<strong> Shared! </strong> The question was shared successfully.
+</div>
+
+<div id="WarningMessage" class="alert alert-warning" role="alert">
+	<strong> Warning! </strong> Email field cannot be empty!
+</div>
+
+<div id="ErrorMessage" class="alert alert-danger" role="alert">
+	<strong> Error! </strong> Something went wrong, try again later.
+</div>

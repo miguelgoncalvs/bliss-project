@@ -1,0 +1,33 @@
+<form>
+    <h3>
+        <span class="label label-default"> {{ title }} </span>
+    </h3>
+    <fieldset class="form-group">
+        <legend> {{ question.question }} </legend> 
+        <img src="{{ question.image_url}}"  class="img-thumbnail">
+        <div class="form-check" data-ng-repeat="option in question.choices">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="questionAnswer" id="questionAnswer"  ng-model="answer" value="{{ option.choice }}">
+                {{ option.choice }}
+            </label>
+        </div>
+    </fieldset>
+    
+    <ul class="pager">
+        <li><a href="#/questions"> Previous </a></li>
+        <li><a href="" role="button" ng-click="submitQuestionResult()"> Submit </a></li>
+        <li><a href="#/share/{{ id }}"> Share </a></li>
+    </ul>
+</form>
+
+<div id="SuccessMessage" class="alert alert-success" role="alert">
+    <strong> Success! </strong> Your answer was submitted.
+</div>
+
+<div id="WarningMessage" class="alert alert-warning" role="alert">
+    <strong> Warning! </strong> Before submit you have to answer the question!
+</div>
+
+<div id="ErrorMessage" class="alert alert-danger" role="alert">
+    <strong> Error! </strong> Something went wrong, try again later.
+</div>
